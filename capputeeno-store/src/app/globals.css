@@ -2,9 +2,11 @@
   --max-width: 1100px;
   --border-radius: 12px;
   --logo-color: #5d5d6d;
+  --bg-primary: #f0f0f5;
   --bg-secondary: #f3f5f6;
   --dark-text: #737380;
   --delete-color: #de3838;
+  --orange-low: #ffa585;
 }
 
 * {
