@@ -59,8 +59,8 @@ function SortPriority(props: SortPriority) {
 
   const SortTypesList = [
     "Novidades",
-    "Preço, Maior - Menor",
     "Preço, Menor - Maior",
+    "Preço, Maior - Menor",
     "Mais vendidos",
   ];
 
@@ -81,11 +81,11 @@ function SortPriority(props: SortPriority) {
           <li onClick={() => handleUpdateSort(SortTypes.NEWS)}>
             {SortTypesList[SortTypes.NEWS]}
           </li>
-          <li onClick={() => handleUpdateSort(SortTypes.BIGGEST_PRICE)}>
-            {SortTypesList[SortTypes.BIGGEST_PRICE]}
-          </li>
           <li onClick={() => handleUpdateSort(SortTypes.MINOR_PRICE)}>
             {SortTypesList[SortTypes.MINOR_PRICE]}
+          </li>
+          <li onClick={() => handleUpdateSort(SortTypes.BIGGEST_PRICE)}>
+            {SortTypesList[SortTypes.BIGGEST_PRICE]}
           </li>
           <li onClick={() => handleUpdateSort(SortTypes.POPULARITY)}>
             {SortTypesList[SortTypes.POPULARITY]}

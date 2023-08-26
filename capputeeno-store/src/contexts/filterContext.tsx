@@ -22,7 +22,7 @@ export default function FilterContextProvider({ children }: ProviderProps) {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
   const [type, setType] = useState(FilterType.ALL);
-  const [sort, setSort] = useState(SortTypes.NEWS);
+  const [sort, setSort] = useState(SortTypes.POPULARITY);
 
   return (
     <FilterContext.Provider
