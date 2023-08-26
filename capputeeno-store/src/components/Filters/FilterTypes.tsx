@@ -3,7 +3,6 @@
 import { useFilter } from "@/hooks/useFilter";
 import { FilterType } from "@/types/filterTypes";
 import { styled } from "styled-components";
-import search from "../icons/search";
 
 interface FilterItemProps {
   selected: boolean;
@@ -26,7 +25,7 @@ const FilterItem = styled.li<FilterItemProps>`
   text-transform: uppercase;
   cursor: pointer;
 
-  color: var(--text-dark);
+  color: var(--dark-text);
 
   border-bottom: ${(props) =>
     props.selected ? "4px solid var(--orange-low)" : ""};
