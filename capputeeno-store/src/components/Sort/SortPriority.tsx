@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Arrow from "../icons/Arrow";
+import Arrow from "../icons/arrow";
 import { useState } from "react";
 import { useFilter } from "@/hooks/useFilter";
 import { SortTypes } from "@/types/sortTypes";
@@ -37,7 +37,7 @@ const PrioritySorter = styled.ul`
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   padding: 12px 16px;
   list-style: none;
-
+  z-index: 1;
   top: 100%;
 
   li {
