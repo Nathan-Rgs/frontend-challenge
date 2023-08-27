@@ -37,7 +37,7 @@ const PrioritySorter = styled.ul`
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   padding: 12px 16px;
   list-style: none;
-  z-index: 1;
+  z-index: 100;
   top: 100%;
 
   li {

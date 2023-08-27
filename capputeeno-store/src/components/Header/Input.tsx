@@ -21,18 +21,24 @@ export const InputContainer = styled.div`
 
   svg {
     position: absolute;
-    right: 20px;
+    right: 3%;
     top: 50%;
     transform: translateY(-50%);
   }
 `;
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  value: string;
+  handleChange: (value: string) => void;
+}
 
 export function InputWithSearchIcon(props: InputProps) {
   return (
     <InputContainer>
-      <Input {...props} />
+      <Input
+        onChange={(event) => props.handleChange(event.target.value)}
+        {...props}
+      />
       <SearchIcon />
     </InputContainer>
   );
