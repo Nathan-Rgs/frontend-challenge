@@ -8,7 +8,7 @@ export function getCategoryByType(type: FilterType) {
 }
 
 export function getFieldBySort(sort: SortTypes) {
-  if (sort === SortTypes.NEWS) return { field: "created_at", order: "ASC" };
+  if (sort === SortTypes.NEWS) return { field: "created_at", order: "DSC" };
   if (sort === SortTypes.BIGGEST_PRICE)
     return { field: "price_in_cents", order: "DSC" };
   if (sort === SortTypes.MINOR_PRICE)
