@@ -38,7 +38,9 @@ const PrioritySorter = styled.ul`
   padding: 12px 16px;
   list-style: none;
   z-index: 100;
+
   top: 100%;
+  right: 8px;
 
   li {
     color: var(--dark-text);

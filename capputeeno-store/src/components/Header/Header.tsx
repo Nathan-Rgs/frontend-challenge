@@ -12,13 +12,17 @@ const TagHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 160px;
+  padding: 12px 24px;
 
   > div {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
+  }
+
+  @media (min-width: ${(props) => props.theme.desktopBreakpoint}) {
+    padding: 20px 160px;
   }
 `;
 
@@ -29,9 +33,16 @@ const sairaStencil = Saira_Stencil_One({
 
 const Logo = styled.a`
   color: var(--logo-color);
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 150%;
+
+  @media (min-width: ${(props) => props.theme.tabletBreakpoint}) {
+    font-size: 24px;
+  }
+  @media (min-width: ${(props) => props.theme.desktopBreakpoint}) {
+    font-size: 40px;
+  }
 `;
 
 export default function Header(props: HeaderProps) {
@@ -43,7 +54,7 @@ export default function Header(props: HeaderProps) {
       <div>
         <InputWithSearchIcon
           value={search}
-          handleChange={setSearch}
+          handlechange={setSearch}
           placeholder="Procurando por algo específico?"
         />
         <CartControl />
