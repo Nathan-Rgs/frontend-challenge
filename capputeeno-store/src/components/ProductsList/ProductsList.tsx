@@ -25,6 +25,7 @@ export default function ProductsList(props: ProductsListProps) {
           name={product.name}
           image_url={product.image_url}
           price={product.price_in_cents}
+          id={product.id}
         />
       ))}
     </ProductsGrid>
