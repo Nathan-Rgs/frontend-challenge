@@ -1,9 +1,9 @@
+import { ProductsFecthResponse } from "@/types/productsResponse";
+import { generateQuery } from "@/utils/graphqlFilters";
 import { useQuery } from "@tanstack/react-query";
 import axios, { AxiosPromise } from "axios";
-import { ProductsFecthResponse } from "@/types/productsResponse";
-import { useFilter } from "./useFilter";
-import { generateQuery } from "@/utils/graphqlFilters";
 import { useDeferredValue } from "react";
+import { useFilter } from "./useFilter";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL as string;
 
@@ -20,6 +20,7 @@ export default function useProducts() {
   const { data } = useQuery({
     queryFn: () => fetchProducts(query),
     queryKey: ["products", type, sort],
+    staleTime: 1000 * 60 * 1,
   });
 
   const products = data?.data?.data?.allProducts;
