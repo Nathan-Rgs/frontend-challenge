@@ -54,7 +54,7 @@ export default function Header(props: HeaderProps) {
       <div>
         <InputWithSearchIcon
           value={search}
-          handlechange={setSearch}
+          handleChange={setSearch}
           placeholder="Procurando por algo específico?"
         />
         <CartControl />
