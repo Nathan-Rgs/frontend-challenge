@@ -1,10 +1,10 @@
 "use client";
 
-import styled from "styled-components";
-import { Saira_Stencil_One } from "next/font/google";
-import { InputWithSearchIcon } from "./Input";
-import CartControl from "./CartControl";
 import { useFilter } from "@/hooks/useFilter";
+import { Saira_Stencil_One } from "next/font/google";
+import styled from "styled-components";
+import CartControl from "./CartControl";
+import { InputWithSearchIcon } from "./Input";
 
 interface HeaderProps {}
 
@@ -36,6 +36,7 @@ const Logo = styled.a`
   font-size: 20px;
   font-weight: 400;
   line-height: 150%;
+  text-decoration: none;
 
   @media (min-width: ${(props) => props.theme.tabletBreakpoint}) {
     font-size: 24px;
@@ -50,7 +51,9 @@ export default function Header(props: HeaderProps) {
 
   return (
     <TagHeader>
-      <Logo className={sairaStencil.className}> Capputeeno </Logo>
+      <Logo href="/" className={sairaStencil.className}>
+        Capputeeno
+      </Logo>
       <div>
         <InputWithSearchIcon
           value={search}
